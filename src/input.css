@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+
+@layer base{
+    body{
+      font-family: "Roboto", sans-serif;
+    }
+}
+
+@theme{
+    --font-quicksand:"Quicksand", serif;
+    --animate-wavey: wavey 1000ms linear infinite;
+
+    @keyframes wavey{
+        0%, 100%{
+            transform: scaleY(0.5);
+        }
+        50%{
+            transform: scale(1.5);
+        }
+    }
+}
+
+@utility animation-delay-*{
+    animation-delay: --value(animation-delay- *);
+    animation-delay: --value([*]);
+}
+
+
+@layer components{
+    .menuItem{
+    @apply flex items-center text-white p-4 font-bold hover:bg-zinc-200/10 cursor-pointer;     
+    }
+}
+
+
+
+@custom-variant group-open {
+    &:is(:where(.group):is(.open,[open],:popover-open,:open) *) {
+        @slot;
+    }
+}

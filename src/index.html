@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+</head>
+<body>
+    <script>
+        window.onload=()=>{
+            const mobileMenuIcon = document.getElementById('mobile-menu-button');
+            mobileMenuIcon.addEventListener("click", ()=>{
+                if(mobileMenuIcon.classList.contains("open")){
+                    mobileMenuIcon.classList.remove("open");
+                }
+                else{
+                    mobileMenuIcon.classList.add("open");
+                }
+            })
+        }
+    </script>
+  
+    <nav class="flex sticky top-0 bg-linear-to-r from-rose-500 to-pink-500">
+        <div>Logo</div>
+        <div class="block md:hidden ml-auto my-auto cursor-pointer pr-4">
+            <div id="mobile-menu-button" class="group peer">
+    
+    <!-- top line -->
+    <div class="bg-zinc-200 rounded-full w-8 h-1 transition-all
+    relative top-0
+    group-open:rotate-45
+    group-open:top-2"></div>
+
+    <!-- middle line -->
+    <div class="opacity-100 bg-zinc-200 mt-1 rounded-full w-8 h-1 transition-all
+    group-open:opacity-0"></div>
+
+    <!-- bottom line -->
+    <div class="bg-zinc-200 rounded-full w-8 h-1 transition-all
+    relative
+    group-open:-rotate-45
+    group-open:-top-2"></div>
+
+</div>
+ <div class="md:flex flex-1 justify-end peer-hover:to-bg-black">
+            <div class="menuItem">Line up</div>
+            <div class="menuItem">Home</div>
+            <div class="menuItem relative group"><span>Tickets</span>
+                <div class="hidden absolute top-full right-0 whitespace-nowrap rounded-b-md bg-linear-to-r from-rose-500 to-pink-500 group-hover:block">
+                    <div class="p-4">Single Day Ticket</div>
+                    <div class="p-4">7 Day Trial</div>
+                </div>
+            </div>
+            <div class="menuItem">Support</div>
+        </div>
+
+        </div>
+       
+    </nav>
+
+<div id="dark-mode-toggle" class="fixed top-24 right-0 inline-block w-12 cursor-pointer rounded-l-lg bg-zinc-900 dark:bg-zinc-200 text-zinc-200 dark:text-zinc-200 p-2 text-3xl">
+<i class="fa-solid fa-sun  dark:hidden">sun</i>
+<i class="fa-solid fa-moon text-black hidden dark:inline">moon</i>
+</div>
+
+
+
+    <div class="container flex flex-col items-center justify-center bg-amber-100 h-[calc(100vh-200px)]">
+     <div class="bg-pink-300 rounded-full">
+        <div class="flex h-14 w-14 items-center justify-center gap-1">
+        <div class="h-2 w-1 rounded-full bg-black animate-wavey animation-delay-[150ms]"></div>
+        <div class="h-3 w-1 rounded-full bg-black animate-wavey animation-delay-200"></div>
+        <div class="h-4 w-1 rounded-full bg-black animate-wavey animation-delay-[150ms]"></div>
+        <div class="h-3 w-1 rounded-full bg-black animate-wavey animation-dealy-300"></div>
+        <div class="h-2 w-1 rounded-full bg-black animate-wavey animation-delay-[75ms]"></div>
+      </div>
+     </div>
+        
+<div class="mt-4 flex w-full gap-4 pb-5 snap-x overflow-x-auto">
+    <div class="min-w-[80%] md:min-w-[40%]">
+        <div style="background-image: url('https://picsum.photos/id/1015/600/400');" class="h-80 w-full snap-center rounded-xl bg-cover bg-center shadow-md shadow-black/20"></div>
+    </div>
+    <div class="min-w-[80%] md:min-w-[40%]">
+        <div style="background-image: url('https://picsum.photos/id/1016/600/400');" class="h-80 w-full snap-center rounded-xl bg-cover bg-center shadow-md shadow-black/20"></div>
+    </div>
+    <div class="min-w-[80%] md:min-w-[40%]">
+        <div style="background-image: url('https://picsum.photos/id/1020/600/400');" class="h-80 w-full snap-center rounded-xl bg-cover bg-center shadow-md shadow-black/20"></div>
+    </div>
+    <div class="min-w-[80%] md:min-w-[40%]">
+        <div style="background-image: url('https://picsum.photos/id/1024/600/400');" class="h-80 w-full snap-center rounded-xl bg-cover bg-center shadow-md shadow-black/20"></div>
+    </div>
+</div>
+        
+
+        
+        <div class="text-5xl">
+            tw:<span class="text-sky-500">mf</span>
+        </div>
+        <div class="font-bold mt-3 text-sm text-black-300">Keep me updated with news and promotions</div>
+        <div class="flex ga-2 mt-3">
+            <input class="border-amber-700 border-2 caret-blue-400 rounded-md"/>
+        </div>
+        <div>
+            <button class="bg-pink-600 text-white">Subscribe</button>
+        </div>
+
+    </div>
+
+
+<div class="@container">
+<table >
+        <tr>
+            <td>Tickets</td>
+            <td>Price</td>
+            <td class="w[150px]"></td>
+        </tr>
+        <tr>
+            <td class="border border-amber-500 border-collapse px-3 py-1">Single day ticket</td>
+            <td class="border border-amber-500 border-collapse px-3 py-1">$30</td>
+            <td class="border border-amber-500 border-collapse px-3 py-1">
+                <button class="cursor-pointer bg-pink-400 p-1 rounded text-white @max-lg:hidden">Buy Now</button>
+            </td>
+        </tr>
+         <tr>
+            <td class="border border-amber-500 border-collapse px-3 py-1">Single day ticket</td>
+            <td class="border border-amber-500 border-collapse px-3 py-1">$30</td>
+            <td class="border border-amber-500 border-collapse px-3 py-1">
+                <button class="cursor-pointer bg-pink-400 p-1 rounded text-white">Buy Now</button>
+            </td>
+        </tr>
+    </table>
+</div>
+    
+</body>
+</html>
